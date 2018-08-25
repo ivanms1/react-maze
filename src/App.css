@@ -1,0 +1,55 @@
+:root {
+  --columns: 10;
+  --rows: 10;
+}
+
+.App {
+  text-align: center;
+}
+
+.menu {
+  padding: 5%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form .input-field {
+  width: 50px;
+}
+
+input {
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 35px);
+  grid-template-rows: repeat(var(--rows), 35px);
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+  border: solid 1px;
+}
+
+.player {
+  background-color: black!important;
+}
+
+.reds {
+  background-color: red;
+}
