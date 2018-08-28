@@ -1,5 +1,5 @@
 import React from 'react';
-
+// Menu component where you set the columns and rows for the game
 const Menu = ({columns, rows, handleSubmit, handleChange}) => {
 	return (
 		<div className="menu">

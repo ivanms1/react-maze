@@ -14,12 +14,13 @@ class App extends Component {
     steps: 0
   }
 
+  // Binding functions to this
   handleChange = this.handleChange.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
   createReds = this.createReds.bind(this);
   movePlayer = this.movePlayer.bind(this);
 
-  //Start game, send columns and rows to css and set player position
+  // Start game, send columns and rows to css and set player position
   handleSubmit(e){
     e.preventDefault();
     const {columns, rows } = this.state;
@@ -43,7 +44,7 @@ class App extends Component {
     })
   }
 
-  //Move player
+  // Move player
   movePlayer(e){
     if(this.state.reds.includes(this.state.player)){
         this.removeReds(this.state.player);
@@ -60,7 +61,7 @@ class App extends Component {
       }
   }
 
-  //Create red squares array
+  // Create red squares array
   createReds(){
     const {columns, rows, player } = this.state;
     let array = [];
@@ -77,7 +78,7 @@ class App extends Component {
     this.setState({ reds: array })
   }
 
-  //Deletes red squares
+  // Deletes red squares
   removeReds(red){
     let array = [...this.state.reds];
     let index = array.indexOf(red);
