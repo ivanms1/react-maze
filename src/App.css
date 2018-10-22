@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
 :root {
   --columns: 10;
   --rows: 10;
@@ -5,6 +7,10 @@
 
 .App {
   text-align: center;
+  font-family: 'Poiret One', cursive;
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
 .menu {
@@ -26,12 +32,17 @@ input {
   text-align: center;
 }
 
+label {
+  font-size: 1.5vw !important;
+}
+
 .game {
   display: flex;
   flex-direction: column;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  height: 100vh;
 }
 
 .game-board {
@@ -40,10 +51,15 @@ input {
   grid-template-rows: repeat(var(--rows), 35px);
 }
 
+.game-board p {
+  font-size: 1.8vw;
+}
+
 .square {
   width: 35px;
   height: 35px;
   border: solid 1px;
+  background-color: white;
 }
 
 .player {

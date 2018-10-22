@@ -24,13 +24,12 @@ class App extends Component {
   handleSubmit(e){
     e.preventDefault();
     const {columns, rows } = this.state;
-    let playerPosition = ((columns * rows) / 2) % 2 === 0 ? ((columns * rows) / 2) - columns/2 : Math.ceil((columns * rows) / 2 );
+    let playerPosition = Math.ceil(((columns * rows) / 2) % 2 === 0 ? ((columns * rows) / 2) - columns/2 : Math.ceil((columns * rows) / 2 ));
     document.documentElement.style.setProperty("--columns", columns);
     document.documentElement.style.setProperty("--rows", rows);
     this.setState({ gameStart: true, player: playerPosition }, () =>{
       this.createReds();
     });
-    
   }
 
   //Set columns and rows

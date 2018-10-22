@@ -6,7 +6,7 @@ const Game = ({columns, rows, player, steps, board, reds, movePlayer }) => (
 		ref={game => game && game.focus()}
 		onKeyDown={movePlayer}
 		tabIndex="0">
-		<h3>Welcome</h3>
+		<h3>eat all the green squares</h3>
 		<GameBoard
 		columns={columns}
 		rows={rows}
